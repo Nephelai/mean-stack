@@ -2,7 +2,11 @@
   "name": "horizontal-structure",
   "version": "0.0.3",
   "dependencies": {
-    "express": "~4.8.8"
+    "express": "^4.16.2",
+    "morgan": "^1.9.0",
+    "compression": "^1.7.1",
+    "body-parser": "^1.18.2",
+    "method-override": "^2.3.10"
   },
   "description": "",
   "main": "index.js",
