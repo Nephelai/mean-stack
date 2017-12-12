@@ -6,6 +6,7 @@ var config = require('./config'),
     methodOverride = require('method-override'),
     session = require('express-session');
 
+
 module.exports = function () {
     var app = express();
 
@@ -22,7 +23,7 @@ module.exports = function () {
     app.use(methodOverride());
 
     app.use(session({
-        saveUninitialized: true,
+            saveUninitialized: true,
         resave: true,
         secret: config.sessionSecret
     }));

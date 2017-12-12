@@ -8,7 +8,8 @@
     "body-parser": "^1.18.2",
     "method-override": "^2.3.10",
     "express-session": "^1.15.6",
-    "ejs": "^2.5.7"
+    "ejs": "^2.5.7",
+    "mongoose": "^4.13.7"
   },
   "description": "",
   "main": "index.js",
