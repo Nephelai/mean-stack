@@ -6,6 +6,7 @@ exports.render = function (req, res) {
     req.session.lastVisit = new Date();
 
     res.render('index', {
-        title: 'Hello EJS!'
-    })
+        title: 'Hello EJS!',
+        userFullName: req.user ? req.user.fullName: ''
+    });
 };
