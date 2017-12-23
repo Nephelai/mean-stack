@@ -3,7 +3,7 @@ var mongoose = require('mongoose'),
 
 var ArticleSchema = new Schema({
     created: {
-        type: Data,
+        type: Date,
         default: Date.now
     },
     title: {
