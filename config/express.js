@@ -12,7 +12,7 @@ var config = require('./config'),
     passport = require('passport');
 
 
-module.exports = function () {
+module.exports = function (db) {
     var app = express();
     var server = http.createServer(app);
     var io = socketio.listen(server);
@@ -49,9 +49,11 @@ module.exports = function () {
 
     require('../app/routes/index.server.routes.js')(app);
     require('../app/routes/users.server.routes.js')(app);
-    require('../app/routes/articles.server.route.js')(app);
+    require('../app/routes/articles.server.routes.js')(app);
 
     app.use(express.static('./public'));
+
+    require('./socketio')(server, io, mongoStore);
 
     return server;
 };
